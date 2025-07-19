@@ -1,0 +1,263 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1a1a1a;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #00ff99;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00ff99;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-photo {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #00ff99;
+  box-shadow: 0 0 20px #00ff99;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-photo:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #00ff99, 0 0 45px #00ff99;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #00ff99;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* About Section */
+.about {
+  background-color: #111111;
+  padding: 60px 40px;
+  color: #f0f0f0;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.about h2 {
+  color: #00ff99;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid #00ff99;
+  box-shadow: 0 0 20px #00ff99;
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.gallery h2 {
+  color: #00ff99;
+  margin-bottom: 30px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Songs Section */
+.songs {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.songs h2 {
+  color: #00ff99;
+  margin-bottom: 30px;
+}
+
+.song-list {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.song-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.song-card p {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* Contact Section */
+.contact {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #00ff99;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.3s ease, filter 0.3s;
+}
+
+.social-icons img:hover {
+  filter: brightness(0) saturate(100%) sepia(100%) hue-rotate(120deg) brightness(1.2);
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 20px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    right: 40px;
+    top: 80px;
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .gallery-grid,
+  .song-list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+}
